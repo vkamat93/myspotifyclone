@@ -1,0 +1,62 @@
+.border{
+    border: 2px solid red;
+    margin: 5px;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.items-center{
+    align-items: center;
+}
+
+.bg-black{
+    background-color: #000000;
+    color: white;
+}
+
+.bg-grey{
+    background-color: #121212;
+}
+
+.rounded{
+    border-radius: 5px;
+    margin: 4px;
+}
+
+.p-1{
+    padding: 10px;
+}
+
+/* Apply dark background color for the scrollbar container */
+::-webkit-scrollbar {
+    width: 6px;  /* Width of the vertical scrollbar */
+    height: 6px; /* Height of the horizontal scrollbar */
+}
+
+/* Apply dark background color to the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #2c2c2c;  /* Dark gray background */
+    border-radius: 10px;
+}
+
+/* Apply a dark color to the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: #555;  /* Lighter gray for the thumb */
+    border-radius: 5px;
+}
+
+/* Change the thumb color when it's hovered */
+::-webkit-scrollbar-thumb:hover {
+    background: #888;  /* Slightly lighter on hover */
+}
+
+/* Style for the scrollbar corner (where the horizontal and vertical scrollbars meet) */
+::-webkit-scrollbar-corner {
+    background: #2c2c2c;  /* Same dark gray background as the track */
+}

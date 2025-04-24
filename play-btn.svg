@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true">
+  <!-- Green circle background -->
+  <circle cx="12" cy="12" r="12" fill="#1fdf34" />
+  <!-- Play icon (centered) -->
+  <path d="M9 6.5v11l9-5.5-9-5.5z" fill="black"/>
+</svg>
