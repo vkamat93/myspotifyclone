@@ -11,7 +11,9 @@ async function getSongs() {
 
 function playMusic(track){
     //var audio = new Audio("/songs/" + track);
-    currentSong.src = "songs/" + track;
+    const basePath = window.location.pathname.includes("myspotifyclone") ? "/myspotifyclone/" : "/";
+    console.log(`Basepath is ${basePath}`)
+    currentSong.src = `${basePath}songs/` + track;
     currentSong.play();
 }
 
@@ -48,6 +50,18 @@ async function main(params) {
         })
     })
 }
+
+// Determine base path based on where the app is running
+const BASE_PATH = (() => {
+    const pathParts = window.location.pathname.split('/');
+    // If hosted at e.g. /myspotifyclone/index.html → grab "/myspotifyclone/"
+    if (pathParts.length > 1 && pathParts[1] !== '') {
+        return `/${pathParts[1]}/`;
+    } else {
+        return '/'; // Local or root
+    }
+})();
+
 
 
 main()
