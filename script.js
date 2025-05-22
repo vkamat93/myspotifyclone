@@ -2,23 +2,11 @@ console.log("Let's start JS")
 let currentSong = new Audio();
 
 async function getSongs() {
-    let a = await fetch("songs/");
-    let response = await a.text()
+    let a = await fetch("songs/songs.json");
+    let response = await a.json()
     console.log(response)
 
-    let div = document.createElement('div');
-    div.innerHTML = response;
-    let ahref = div.getElementsByTagName("a")
-    console.log(ahref)
-
-    let songs = []
-
-    for (const a of ahref) {
-        if (a.href.endsWith(".mp3")) {
-            songs.push(a.href.split("/songs/")[1])
-        }
-    }
-    return songs
+    return response
 }
 
 function playMusic(track){
@@ -52,7 +40,7 @@ async function main(params) {
     //     console.log(duration)
     // });
 
-    //attac an event listener to each song
+    //attach an event listener to each song
     Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e=>{
         e.addEventListener("click", elem=>{
             console.log(e.getElementsByTagName("div")[0].firstElementChild.innerHTML);
